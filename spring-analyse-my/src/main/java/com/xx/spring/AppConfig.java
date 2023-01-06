@@ -1,9 +1,8 @@
 package com.xx.spring;
 
-import com.xx.spring.service.impl.X;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * @auther: hanyangyang
@@ -11,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @Configurable
 @ComponentScan("com.xx.spring")
+//@ImportResource("classpath:spring.xml")
 public class AppConfig {
 
 }
