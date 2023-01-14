@@ -88,8 +88,11 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * {@link Configuration @Configuration} classes
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
+		// 调用默认的构造方法，实例化容器
 		this();
+		// 注册配置类，或者说是注册bean,因为通过这个方法也可以注册普通的Bean
 		register(componentClasses);
+		// 刷新容器，或者说是初始化容器更合适
 		refresh();
 	}
 
