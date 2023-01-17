@@ -11,7 +11,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class MyTest {
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext();
+		// 这里可以注册配置类，也可以注册一个普通的bean
+		ac.register(AppConfig.class);
+		// 刷新容器或者说是初始化容器更合适
+		ac.refresh();
 		ac.getBean(X.class).printField();
 	}
 }
